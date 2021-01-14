@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: monospace;
+}
+
+.container-1200  {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.button {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    width: 220px;
+    height: 80px;
+    /*border-radius: 8px 8px 0 0 ;*/
+    color: #222222;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    transform-style: preserve-3d;
+    transform: rotate(-30deg) skew(20deg) translate(0 , 0);
+    transition: 0.3s;
+    top: 0;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+.button i {
+    margin-right: 10px;
+    font-size: 1.6em;
+    transition: 0.5s;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background-color: #cccccc;
+    top: 0;
+    left: 0;
+    transform: skew(0deg , -46deg) translate(-19px, -10px);
+    transition: 0.5s;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 220px;
+    height: 21px;
+    background-color: #cccccc;
+    transform: rotate(0deg) skew(-44deg) translate(10px , 20px);
+    transition: 0.5s;
+}
+
+.button:hover {
+    top: -40px;
+    color: #ffffff;
+    box-shadow: -50px 51px 15px #999;
+}
+
+.button:hover i {
+    color: #ffffff !important;
+}
+
+.button[data-type="facebook"] i {
+    color: #3B5998;
+}
+
+.button[data-type="facebook"]:hover {
+    background-color: #3B5998;
+}
+
+.button[data-type="facebook"]:hover:before {
+    background-color: #34437b;
+}
+
+.button[data-type="facebook"]:hover:after {
+    background-color: #5370c7;
+}
+
+.button[data-type="twitter"] i {
+    color: #55ACEE;
+}
+
+.button[data-type="twitter"]:hover {
+    background-color: #55ACEE;
+}
+
+.button[data-type="twitter"]:hover:before {
+    background-color: #376e94;
+}
+
+.button[data-type="twitter"]:hover:after {
+    background-color: #509ad8;
+}
+
+.button[data-type="linkedin"] i {
+    color: #007bb5;
+}
+
+.button[data-type="linkedin"]:hover{
+    background-color : #007bb5;
+}
+
+.button[data-type="linkedin"]:hover:before {
+    background-color: #00699c;
+}
+
+.button[data-type="linkedin"]:hover:after {
+    background-color: #0087ce;
+}
+
+.button[data-type="instagram"] i {
+    color: #d82470;
+}
+
+.button[data-type="instagram"]:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.button[data-type="instagram"]:hover:before {
+    background-color: #d92265;
+}
+
+.button[data-type="instagram"]:hover:after {
+    background-color: #ff4569;
+}
