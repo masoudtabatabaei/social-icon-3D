@@ -14,6 +14,15 @@ body {
     margin: 0 auto;
 }
 
+.container-1200 .watermark {
+    color: #cbcbcb;
+    font-size: 2em;
+    z-index: -1;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
 .button-container {
     display: flex;
     justify-content: space-evenly;
@@ -81,20 +90,20 @@ body {
     color: #ffffff !important;
 }
 
-.button[data-type="facebook"] i {
-    color: #3B5998;
+.button[data-type="github"] i {
+    color: #212529;
 }
 
-.button[data-type="facebook"]:hover {
-    background-color: #3B5998;
+.button[data-type="github"]:hover {
+    background-color: #212529;
 }
 
-.button[data-type="facebook"]:hover:before {
-    background-color: #34437b;
+.button[data-type="github"]:hover:before {
+    background-color: #0e1114;
 }
 
-.button[data-type="facebook"]:hover:after {
-    background-color: #5370c7;
+.button[data-type="github"]:hover:after {
+    background-color: #444d52;
 }
 
 .button[data-type="twitter"] i {
@@ -141,9 +150,51 @@ body {
 }
 
 .button[data-type="instagram"]:hover:before {
-    background-color: #d92265;
+    background-color: #d94071;
 }
 
 .button[data-type="instagram"]:hover:after {
-    background-color: #ff4569;
+    background-color: #ff6e7a;
+}
+
+.social-address-container {
+    /*display: none;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    background-color: transparent;
+    max-width: fit-content;
+    margin: 0 auto 6em;
+}
+
+.social-address {
+    text-align: center;
+    padding: 1em 1.2em;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-shadow: 0px 2px 6px #000;
+    box-shadow: 1px 1px 5px #444;
+}
+
+.social-address.github {
+    background-color: #212529;
+}
+
+.social-address.twitter {
+    background-color: #4a7db6;
+}
+
+.social-address.linkedin {
+    background-color: #007bb5;
+}
+
+.social-address.instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
